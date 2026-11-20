@@ -1,0 +1,51 @@
+Created At: 2026-11-20T05:29:47+05:30
+Completed At: 2026-11-20T05:29:47+05:30
+Created At: 2026-11-20T05:29:47+05:30
+Completed At: 2026-11-20T05:29:47+05:30
+Command exited with code 0.
+
+Command output:
+=== C33 ===
+Markers: ['Freeman et al. (2021)']
+Text: Freeman et al. (2021) identified limitations in the available evidence for AI-based breast cancer screening, while external validation research has also highlighted concerns about methodological bias and generalizability (Freeman et al., 2021; External Validation Review Group, 2022).
+Citations in card: ['Freeman2021']
+Verdict: CONTRADICTORY
+
+=== C11 ===
+Markers: ['[1, 2]']
+Text: Similar findings have been reported in other image-based diagnostic applications [1, 2].
+Citations in card: [None]
+Verdict: UNVERIFIABLE
+
+=== C34 ===
+Markers: ['[3]']
+Text: More recent research suggests that prospective evaluation and carefully monitored implementation are important when assessing AI systems in screening programmes [3].
+Citations in card: [None]
+Verdict: UNVERIFIABLE
+
+=== C1 ===
+Markers: []
+Text: # Evaluating the Accuracy, Reliability and Clinical Applicability of Artificial Intelligence in Medical Diagnosis
+
+Artificial intelligence (AI) has become an increasingly important component of modern healthcare, particularly in medical imaging, disease classification, clinical decision support and patient risk prediction.
+Citations in card: [None]
+Verdict: UNCITED
+
+=== C2 ===
+Markers: []
+Text: Deep-learning techniques have demonstrated promising performance in medical image classification, with some systems achieving results comparable to experienced specialists under controlled evaluation conditions (Esteva et al., 2017; McKinney et al., 2020).
+Citations in card: [None]
+Verdict: UNCITED
+
+=== C3 ===
+Markers: []
+Text: However, high diagnostic accuracy in an experimental dataset should not automatically be interpreted as evidence of clinical effectiveness or readiness for independent medical deployment.
+Citations in card: [None]
+Verdict: UNCITED
+
+=== C17 ===
+Markers: []
+Text: A previous review by Smith (1998, as cited in Brown, 2024) also established that computerized diagnosis was capable of outperforming every human specialist.
+Citations in card: [None]
+Verdict: UNCITED
+

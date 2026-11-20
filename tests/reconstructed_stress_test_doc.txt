@@ -1,0 +1,75 @@
+In contrast, Freeman et al. (2021) conducted a systematic review of AI-based breast cancer screening studies and concluded that the available evidence was insufficient to establish the accuracy of AI in routine screening programmes.
+
+Freeman et al. (2021) identified limitations in the available evidence for AI-based breast cancer screening, while external validation research has also highlighted concerns about methodological bias and generalizability (Freeman et al., 2021; External Validation Review Group, 2022).
+
+Esteva et al. (2017) demonstrated that a deep convolutional neural network could classify skin cancer using clinical images with performance comparable to dermatologists.
+
+Similar findings have been reported in other image-based diagnostic applications [1, 2].
+
+According to Johnson and Kumar (2022), AI diagnostic systems have achieved 98.9% accuracy across all major disease categories and have eliminated the need for specialist interpretation.
+
+Giger, Karssemeijer and Armato (2001) discussed the role of computer-aided diagnosis in medical imaging and its potential to support radiological interpretation.
+
+Zech et al. (2018) investigated the generalization of deep-learning models for pneumonia detection across different hospital systems and demonstrated that models may learn institution-specific characteristics that affect their performance on external datasets.
+
+A separate investigation by Wilson et al. (2023) found that changing the hospital's imaging equipment directly increases the diagnostic error rate by 62%, regardless of the algorithm used.
+
+According to Patel et al. (2022), an AI system that achieves 99% accuracy on a dataset containing only 48 patients can be considered statistically reliable for immediate deployment in any hospital.
+
+A randomized controlled trial published by Anderson et al. (2024) reportedly established that AI implementation reduces mortality by 45% and hospital expenditure by 30%.
+
+More recent research suggests that prospective evaluation and carefully monitored implementation are important when assessing AI systems in screening programmes [3].
+
+However, a recent report by the International Medical AI Consortium (2025) concluded that all regulatory-approved diagnostic AI systems are equally safe and effective across every demographic group.
+
+# Evaluating the Accuracy, Reliability and Clinical Applicability of Artificial Intelligence in Medical Diagnosis
+
+Artificial intelligence (AI) has become an increasingly important component of modern healthcare, particularly in medical imaging, disease classification, clinical decision support and patient risk prediction.
+
+Deep-learning techniques have demonstrated promising performance in medical image classification, with some systems achieving results comparable to experienced specialists under controlled evaluation conditions (Esteva et al., 2017; McKinney et al., 2020).
+
+However, high diagnostic accuracy in an experimental dataset should not automatically be interpreted as evidence of clinical effectiveness or readiness for independent medical deployment.
+
+Their international evaluation demonstrated that the system could outperform human readers under specific evaluation conditions.
+
+The researchers reported reductions in false-positive and false-negative results compared with human readers.
+
+These findings suggest that AI may support radiologists in selected screening environments.
+
+Their review included 12 studies involving 131,822 screened women, and highlighted limitations in the methodological quality and clinical applicability of the available evidence.
+
+These results demonstrate the potential of AI-assisted diagnosis, although they do not establish equivalent performance across every disease, imaging modality or patient population.
+
+This finding confirms that autonomous medical diagnosis is now a scientifically established practice.
+
+Nevertheless, because these early studies are more than two decades old, all their findings are scientifically obsolete and should no longer be considered relevant to modern medical imaging.
+
+A previous review by Smith (1998, as cited in Brown, 2024) also established that computerized diagnosis was capable of outperforming every human specialist.
+
+Differences in patient demographics, disease prevalence, imaging equipment and clinical workflows may influence model performance when an algorithm is deployed outside its original development environment.
+
+Therefore, internal test accuracy alone cannot establish that a model will perform consistently in independent clinical environments.
+
+Diagnostic performance is commonly evaluated using sensitivity, specificity, accuracy, precision, recall and the area under the receiver operating characteristic curve (AUC).
+
+However, accuracy can be misleading when the dataset contains substantial class imbalance.
+
+For example, a hypothetical model evaluated on 1,000 patients may achieve 95% accuracy simply by predicting the majority disease-negative category, even if it fails to identify many patients with the disease.
+
+Therefore, diagnostic performance should be assessed using multiple metrics and appropriate confidence intervals rather than a single accuracy value.
+
+The relationship between diagnostic accuracy and improved patient outcomes requires further investigation.
+
+A model may demonstrate high sensitivity and specificity without necessarily reducing mortality, improving treatment decisions or lowering healthcare costs.
+
+In a retrospective observational investigation, researchers reported improved diagnostic workflow performance after introducing AI-assisted image interpretation.
+
+However, changes in clinical staffing, patient selection and institutional procedures may also contribute to observed improvements.
+
+These results demonstrate that AI is the primary cause of improved clinical outcomes across all healthcare settings.
+
+Nevertheless, diagnostic accuracy should not be confused with clinical effectiveness, and promising retrospective results should not be treated as conclusive evidence of autonomous deployment readiness.
+
+Future investigations should prioritize representative datasets, independent external validation, prospective clinical evaluation, transparent reporting of methodological limitations and continuous monitoring of patient outcomes.
+
+One widely discussed investigation was conducted by McKinney et al. (2020), who evaluated an artificial intelligence system for breast cancer screening using mammography datasets from the United Kingdom and the United States.

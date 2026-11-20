@@ -1,0 +1,211 @@
+{
+  "sample_size": 20,
+  "matches": 17,
+  "measured_accuracy_pct": 85.0,
+  "details": [
+    {
+      "id": "BM01",
+      "claim": "Deep neural scaling follows power laws with compute and dataset size.",
+      "expected": "SUPPORTED",
+      "predicted": "SUPPORTED",
+      "match": true,
+      "score": 0.99,
+      "flags": []
+    },
+    {
+      "id": "BM02",
+      "claim": "Real-time automated code testing improved final exam pass rates by 50%.",
+      "expected": "PARTIALLY_SUPPORTED",
+      "predicted": "PARTIALLY_SUPPORTED",
+      "match": true,
+      "score": 0.84,
+      "flags": [
+        "NUMBER_MISMATCH",
+        "NEEDS_HUMAN_REVIEW"
+      ]
+    },
+    {
+      "id": "BM03",
+      "claim": "Daily smartphone meditation completely resolves undergraduate academic distress across all disciplines.",
+      "expected": "PARTIALLY_SUPPORTED",
+      "predicted": "PARTIALLY_SUPPORTED",
+      "match": true,
+      "score": 0.97,
+      "flags": [
+        "SCOPE_OVERGENERALIZED"
+      ]
+    },
+    {
+      "id": "BM04",
+      "claim": "Potassium channel selectivity filters undergo rapid voltage-gated conformational switching.",
+      "expected": "UNSUPPORTED",
+      "predicted": "UNSUPPORTED",
+      "match": true,
+      "score": 0.72,
+      "flags": []
+    },
+    {
+      "id": "BM05",
+      "claim": "Quantum gradient descent speeds up matrix inversion by 120x.",
+      "expected": "UNVERIFIABLE",
+      "predicted": "UNVERIFIABLE",
+      "match": true,
+      "score": 0.0,
+      "flags": [
+        "NEEDS_HUMAN_REVIEW"
+      ]
+    },
+    {
+      "id": "BM06",
+      "claim": "Self-supervised representations reduce reliance on extensive manual labels.",
+      "expected": "UNCITED",
+      "predicted": "UNCITED",
+      "match": true,
+      "score": 0.0,
+      "flags": [
+        "NEEDS_HUMAN_REVIEW"
+      ]
+    },
+    {
+      "id": "BM07",
+      "claim": "Statistical language models are bounded by finite memory footprints of 1,000 tokens.",
+      "expected": "POSSIBLY_OUTDATED",
+      "predicted": "POSSIBLY_OUTDATED",
+      "match": true,
+      "score": 0.74,
+      "flags": []
+    },
+    {
+      "id": "BM08",
+      "claim": "Peptide-functionalized scaffolds accelerate osteogenesis within three weeks.",
+      "expected": "SUPPORTED",
+      "predicted": "SUPPORTED",
+      "match": true,
+      "score": 0.99,
+      "flags": [
+        "RETRACTED_SOURCE",
+        "NEEDS_HUMAN_REVIEW"
+      ]
+    },
+    {
+      "id": "BM09",
+      "claim": "CRISPR-Cas9 enables targeted double-strand breaks in human genome sequences.",
+      "expected": "SUPPORTED",
+      "predicted": "UNSUPPORTED",
+      "match": false,
+      "score": 0.72,
+      "flags": []
+    },
+    {
+      "id": "BM10",
+      "claim": "Dietary sodium reduction reduces systolic blood pressure by 25 mmHg in normotensive adults.",
+      "expected": "PARTIALLY_SUPPORTED",
+      "predicted": "PARTIALLY_SUPPORTED",
+      "match": true,
+      "score": 0.89,
+      "flags": [
+        "NUMBER_NOT_FOUND"
+      ]
+    },
+    {
+      "id": "BM11",
+      "claim": "High-temperature superconductivity in cuprates operates strictly via acoustic phonon pairing.",
+      "expected": "CONTRADICTORY",
+      "predicted": "CONTRADICTORY",
+      "match": true,
+      "score": 0.99,
+      "flags": []
+    },
+    {
+      "id": "BM12",
+      "claim": "The cosmic microwave background exhibits quadrupole temperature fluctuations.",
+      "expected": "SUPPORTED",
+      "predicted": "SUPPORTED",
+      "match": true,
+      "score": 0.99,
+      "flags": []
+    },
+    {
+      "id": "BM13",
+      "claim": "Graph neural networks outperform convolutional networks on molecular solubility prediction.",
+      "expected": "SUPPORTED",
+      "predicted": "SUPPORTED",
+      "match": true,
+      "score": 0.99,
+      "flags": []
+    },
+    {
+      "id": "BM14",
+      "claim": "Lithium-sulfur batteries retain 99% capacity after 5,000 deep discharge cycles.",
+      "expected": "PARTIALLY_SUPPORTED",
+      "predicted": "PARTIALLY_SUPPORTED",
+      "match": true,
+      "score": 0.84,
+      "flags": [
+        "NUMBER_MISMATCH",
+        "NEEDS_HUMAN_REVIEW"
+      ]
+    },
+    {
+      "id": "BM15",
+      "claim": "A 100% cure rate for metastatic melanoma was attained using synthetic oncolytic virus OX-40.",
+      "expected": "UNVERIFIABLE",
+      "predicted": "UNVERIFIABLE",
+      "match": true,
+      "score": 0.0,
+      "flags": [
+        "NEEDS_HUMAN_REVIEW"
+      ]
+    },
+    {
+      "id": "BM16",
+      "claim": "Convolutional receptive fields expand hierarchically across layered architectures.",
+      "expected": "SUPPORTED",
+      "predicted": "UNSUPPORTED",
+      "match": false,
+      "score": 0.72,
+      "flags": []
+    },
+    {
+      "id": "BM17",
+      "claim": "Atmospheric methane concentrations increased by 40% between 2000 and 2005.",
+      "expected": "CONTRADICTORY",
+      "predicted": "CONTRADICTORY",
+      "match": true,
+      "score": 0.89,
+      "flags": [
+        "NUMBER_NOT_FOUND"
+      ]
+    },
+    {
+      "id": "BM18",
+      "claim": "Perovskite solar cell degradation is dominated by moisture-induced phase segregation.",
+      "expected": "SUPPORTED",
+      "predicted": "SUPPORTED",
+      "match": true,
+      "score": 0.99,
+      "flags": []
+    },
+    {
+      "id": "BM19",
+      "claim": "Solid-state electrolytes eliminate lithium dendrite penetration at current densities exceeding 100 mA/cm2.",
+      "expected": "PARTIALLY_SUPPORTED",
+      "predicted": "PARTIALLY_SUPPORTED",
+      "match": true,
+      "score": 0.87,
+      "flags": [
+        "NUMBER_NOT_FOUND",
+        "SCOPE_OVERGENERALIZED"
+      ]
+    },
+    {
+      "id": "BM20",
+      "claim": "Deep reinforcement learning agents achieve superhuman performance in multi-agent real-time strategy games.",
+      "expected": "SUPPORTED",
+      "predicted": "UNSUPPORTED",
+      "match": false,
+      "score": 0.72,
+      "flags": []
+    }
+  ]
+}
