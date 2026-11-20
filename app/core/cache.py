@@ -8,12 +8,24 @@ from app.config import settings
 class DiskCache:
     """Disk-backed hash-based cache for HTTP and LLM calls."""
     def __init__(self, cache_dir: Optional[str] = None):
-        self.cache_dir = Path(cache_dir or settings.CACHE_DIR)
-        self.cache_dir.mkdir(parents=True, exist_ok=True)
+        target = cache_dir or settings.CACHE_DIR
+        try:
+            self.cache_dir = Path(target)
+            self.cache_dir.mkdir(parents=True, exist_ok=True)
+        except OSError:
+            self.cache_dir = Path("/tmp/.cache")
+            try:
+                self.cache_dir.mkdir(parents=True, exist_ok=True)
+            except OSError:
+                pass
+
         self.http_dir = self.cache_dir / "http"
         self.llm_dir = self.cache_dir / "llm"
-        self.http_dir.mkdir(parents=True, exist_ok=True)
-        self.llm_dir.mkdir(parents=True, exist_ok=True)
+        try:
+            self.http_dir.mkdir(parents=True, exist_ok=True)
+            self.llm_dir.mkdir(parents=True, exist_ok=True)
+        except OSError:
+            pass
 
     def _hash_key(self, namespace: str, key_data: Any) -> str:
         if isinstance(key_data, dict) or isinstance(key_data, list):

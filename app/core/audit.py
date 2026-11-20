@@ -11,24 +11,37 @@ class AuditLogManager:
         self.db_path = db_path or settings.DB_PATH
         self._init_db()
 
+    def _get_connection(self):
+        try:
+            return sqlite3.connect(self.db_path)
+        except (sqlite3.OperationalError, OSError):
+            self.db_path = "/tmp/citeverify.db"
+            try:
+                return sqlite3.connect(self.db_path)
+            except (sqlite3.OperationalError, OSError):
+                return sqlite3.connect(":memory:")
+
     def _init_db(self):
-        conn = sqlite3.connect(self.db_path)
-        cur = conn.cursor()
-        cur.execute("""
-            CREATE TABLE IF NOT EXISTS audit_log (
-                id TEXT PRIMARY KEY,
-                claim_id TEXT NOT NULL,
-                pair_id TEXT,
-                timestamp TEXT NOT NULL,
-                actor TEXT NOT NULL,
-                action TEXT NOT NULL,
-                before_value TEXT,
-                after_value TEXT,
-                note TEXT
-            )
-        """)
-        conn.commit()
-        conn.close()
+        try:
+            conn = self._get_connection()
+            cur = conn.cursor()
+            cur.execute("""
+                CREATE TABLE IF NOT EXISTS audit_log (
+                    id TEXT PRIMARY KEY,
+                    claim_id TEXT NOT NULL,
+                    pair_id TEXT,
+                    timestamp TEXT NOT NULL,
+                    actor TEXT NOT NULL,
+                    action TEXT NOT NULL,
+                    before_value TEXT,
+                    after_value TEXT,
+                    note TEXT
+                )
+            """)
+            conn.commit()
+            conn.close()
+        except Exception:
+            pass
 
     def record_entry(
         self,
@@ -53,7 +66,7 @@ class AuditLogManager:
             after_value=after_value,
             note=note
         )
-        conn = sqlite3.connect(self.db_path)
+        conn = self._get_connection()
         cur = conn.cursor()
         cur.execute(
             """
@@ -77,7 +90,7 @@ class AuditLogManager:
         return entry
 
     def get_entries_for_claim(self, claim_id: str) -> List[AuditEntry]:
-        conn = sqlite3.connect(self.db_path)
+        conn = self._get_connection()
         cur = conn.cursor()
         cur.execute(
             """
@@ -106,7 +119,7 @@ class AuditLogManager:
         return entries
 
     def get_all_entries(self) -> List[AuditEntry]:
-        conn = sqlite3.connect(self.db_path)
+        conn = self._get_connection()
         cur = conn.cursor()
         cur.execute(
             """

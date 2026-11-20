@@ -24,7 +24,8 @@ from app.core.audit import audit_manager
 app = FastAPI(
     title=settings.APP_NAME,
     description="Scientific Claim and Citation Verification System — Academic Integrity Copilot",
-    version="1.0.0"
+    version="1.0.0",
+    redirect_slashes=False
 )
 
 # Enable CORS for development

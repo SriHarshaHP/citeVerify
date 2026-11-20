@@ -2,6 +2,15 @@ import os
 from pathlib import Path
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
+is_serverless = bool(
+    os.getenv("VERCEL")
+    or os.getenv("AWS_LAMBDA_FUNCTION_NAME")
+    or os.getenv("LAMBDA_TASK_ROOT")
+)
+
+default_cache_dir = "/tmp/.cache" if is_serverless else "./.cache"
+default_db_path = "/tmp/citeverify.db" if is_serverless else "./citeverify.db"
+
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file=".env", extra="allow")
 
@@ -17,8 +26,8 @@ class Settings(BaseSettings):
     
     # Offline Demo and Cache
     OFFLINE_DEMO: bool = True
-    CACHE_DIR: str = "./.cache"
-    DB_PATH: str = "./citeverify.db"
+    CACHE_DIR: str = default_cache_dir
+    DB_PATH: str = default_db_path
     
     # Scholarly APIs
     SCHOLARLY_CONTACT_EMAIL: str = "citeverify-demo@innovedge2026.org"
@@ -37,5 +46,13 @@ class Settings(BaseSettings):
 
 settings = Settings()
 
-# Ensure directories exist
-Path(settings.CACHE_DIR).mkdir(parents=True, exist_ok=True)
+# Ensure directories exist safely (supporting read-only serverless filesystems)
+try:
+    Path(settings.CACHE_DIR).mkdir(parents=True, exist_ok=True)
+except OSError:
+    settings.CACHE_DIR = "/tmp/.cache"
+    settings.DB_PATH = "/tmp/citeverify.db"
+    try:
+        Path(settings.CACHE_DIR).mkdir(parents=True, exist_ok=True)
+    except OSError:
+        pass
